@@ -15,6 +15,17 @@
 namespace ABC;
 
 /**
+ * Move views/ to a top level folder.
+ */
+add_filter( 'hybrid/config/view', function ( $config ) {
+
+		$config['path'] = 'views'; // relative to theme root
+
+		return $config;
+
+} );
+
+/**
  * Returns the metadata separator.
  *
  * @since  1.0.0

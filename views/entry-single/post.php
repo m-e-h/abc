@@ -12,7 +12,7 @@
 
 	<div class="entry__content">
 		<?php the_content() ?>
-		<?php Hybrid\render_view( 'partials', 'pagination-singular' ) ?>
+		<?php Hybrid\render_view( 'components', 'pagination-singular' ) ?>
 	</div>
 
 	<footer class="entry__footer">

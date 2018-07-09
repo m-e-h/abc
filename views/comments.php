@@ -10,14 +10,14 @@
 
 			<h2 class="comments__title"><?php comments_number() ?></h2>
 
-			<?php Hybrid\render_view( 'partials', 'pagination-comments' ) ?>
+			<?php Hybrid\render_view( 'components', 'pagination-comments' ) ?>
 
 			<ol class="comments__list">
 
 				<?php wp_list_comments( [
 					'style'        => 'ol',
 					'callback'     => function( $comment, $args, $depth ) {
-						Hybrid\render_view( 'comment', Hybrid\get_comment_hierarchy(), compact( 'comment', 'args', 'depth' ) );
+						Hybrid\render_view( 'components', 'comment', compact( 'comment', 'args', 'depth' ) );
 					},
 					'end-callback' => function() {
 						echo '</li>';
@@ -31,7 +31,7 @@
 		<?php if ( ! comments_open() ) : ?>
 
 			<p class="comments__closed">
-				<?php esc_html_e( 'Comments are closed.' ) ?>
+				<?php esc_html_e( 'Comments are closed.', 'abc' ) ?>
 			</p>
 
 		<?php endif ?>
