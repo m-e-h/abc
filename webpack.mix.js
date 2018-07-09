@@ -58,9 +58,9 @@ mix.version();
  *
  * @link https://laravel.com/docs/5.6/mix#working-with-scripts
  */
-mix.js( 'resources/scripts/app.js',                'scripts' )
-   .js( 'resources/scripts/customize-controls.js', 'scripts' )
-   .js( 'resources/scripts/customize-preview.js',  'scripts' );
+mix.js( 'src/scripts/app.js',                'scripts' )
+   .js( 'src/scripts/customize-controls.js', 'scripts' )
+   .js( 'src/scripts/customize-preview.js',  'scripts' );
 
 /*
  * Compile CSS. Mix supports Sass, Less, Stylus, and plain CSS, and has functions
@@ -79,9 +79,9 @@ var sassConfig = {
 };
 
 // Compile SASS/CSS.
-mix.sass( 'resources/styles/screen.scss',             'styles', sassConfig )
-   .sass( 'resources/styles/editor.scss',             'styles', sassConfig )
-   .sass( 'resources/styles/customize-controls.scss', 'styles', sassConfig );
+mix.sass( 'src/styles/screen.scss',             'styles', sassConfig )
+   .sass( 'src/styles/editor.scss',             'styles', sassConfig )
+   .sass( 'src/styles/customize-controls.scss', 'styles', sassConfig );
 
 /*
  * Add custom Webpack configuration.
@@ -108,9 +108,9 @@ mix.webpackConfig( {
 	plugins     : [
 		// @link https://github.com/webpack-contrib/copy-webpack-plugin
 		new CopyWebpackPlugin( [
-			{ from : 'resources/img',   to : 'img'   },
-			{ from : 'resources/svg',   to : 'svg'   },
-			{ from : 'resources/fonts', to : 'fonts' }
+			{ from : 'src/img',   to : 'img'   },
+			{ from : 'src/svg',   to : 'svg'   },
+			{ from : 'src/fonts', to : 'fonts' }
 		] ),
 		// @link https://github.com/Klathmon/imagemin-webpack-plugin
 		new ImageminPlugin( {
@@ -147,7 +147,7 @@ mix.browserSync( {
 	port  : 8080,
 	files : [
 		"**/*.{jpg,jpeg,png,gif,svg,eot,ttf,woff,woff2}",
-		"resources/views/**/*.php",
+		"src/views/**/*.php",
 		"app/**/*.php"
 	]
 } );
