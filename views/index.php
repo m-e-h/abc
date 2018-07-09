@@ -7,7 +7,7 @@ Hybrid\render_view( 'header' );
 
 	<main id="main" class="app-main">
 
-		<?php Hybrid\render_view( 'content', Hybrid\get_global_hierarchy() ); ?>
+		<?php Hybrid\render_view( 'layouts', Hybrid\get_global_hierarchy() ); ?>
 
 	</main>
 
