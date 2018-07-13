@@ -17,12 +17,9 @@ namespace ABC;
 /**
  * Move views/ to a top level folder.
  */
-add_filter( 'hybrid/config/view', function ( $config ) {
+add_filter( 'hybrid/template/path', function( $path ) {
 
-		$config['path'] = 'views'; // relative to theme root
-
-		return $config;
-
+	return 'views';
 } );
 
 /**
