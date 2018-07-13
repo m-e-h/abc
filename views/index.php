@@ -1,19 +1,19 @@
 <?php
 
-Hybrid\render_view( 'header' );
+Hybrid\View\render( 'header' );
 ?>
 
 <div class="app-content">
 
 	<main id="main" class="app-main">
 
-		<?php Hybrid\render_view( 'layouts', Hybrid\get_global_hierarchy() ); ?>
+		<?php Hybrid\View\render( 'layouts', Hybrid\Template\hierarchy() ); ?>
 
 	</main>
 
-	<?php Hybrid\render_view( 'components/sidebar', 'primary', [ 'name' => 'primary' ] ); ?>
+	<?php Hybrid\View\render( 'components/sidebar', 'primary', [ 'name' => 'primary' ] ); ?>
 
 </div>
 
 <?php
-Hybrid\render_view( 'footer' );
+Hybrid\View\render( 'footer' );

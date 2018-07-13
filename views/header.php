@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html <?php Hybrid\attr( 'html' ) ?>>
+<html <?php Hybrid\Attr\render( 'html' ) ?>>
 
 <head>
 <?php wp_head() ?>
 </head>
 
-<body <?php Hybrid\attr( 'body' ) ?>>
+<body <?php Hybrid\Attr\render( 'body' ) ?>>
 
 <div class="app">
 
 	<header class="app-header">
 
-		<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'abc' ) ?></a>
+		<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content' ) ?></a>
 
 		<div class="app-header__branding">
-			<?php Hybrid\site_title( '', [ 'class' => 'app-header__title' ] ) ?>
-			<?php Hybrid\site_description( '', [ 'class' => 'app-header__description' ] ) ?>
+			<?php Hybrid\Site\render_title() ?>
+			<?php Hybrid\Site\render_description() ?>
 		</div>
 
-		<?php Hybrid\render_view( 'components/menu', 'primary', [ 'name' => 'primary' ] ) ?>
+		<?php Hybrid\View\render( 'menu', 'primary', [ 'name' => 'primary' ] ) ?>
 
 	</header>
