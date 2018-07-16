@@ -12,7 +12,7 @@
 
 	<div class="entry__content">
 		<?php the_content() ?>
-		<?php Hybrid\View\render( 'partials', 'pagination-singular' ) ?>
+		<?php Hybrid\View\render( 'components', 'pagination-singular' ) ?>
 	</div>
 
 	<?php $gallery = gallery_shortcode( [
