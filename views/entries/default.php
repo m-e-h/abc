@@ -1,7 +1,9 @@
 <article <?php Hybrid\Attr\render( 'entry' ) ?>>
 
+	<?php the_post_thumbnail( 'abc-medium', [ 'class' => 'entry__image' ] ) ?>
+
 	<header class="entry__header">
-		<h1 class="entry__title"><?php single_post_title() ?></h1>
+		<h2 class="entry__title">DEFAULT<a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
 	</header>
 
 	<div class="entry__content">

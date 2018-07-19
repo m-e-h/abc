@@ -1,7 +1,7 @@
 <article <?php Hybrid\Attr\render( 'entry' ) ?>>
 
 	<header class="entry__header">
-		<h1 class="entry__title"><?php single_post_title() ?></h1>
+		<h1 class="entry__title">SINGLE<?php single_post_title() ?></h1>
 
 		<div class="entry__byline">
 			<?php Hybrid\Post\render_author() ?>
@@ -12,7 +12,7 @@
 
 	<div class="entry__content">
 		<?php the_content() ?>
-		<?php Hybrid\View\render( 'partials', 'pagination-singular' ) ?>
+		<?php Hybrid\View\render( 'components', 'pagination-singular' ) ?>
 	</div>
 
 	<footer class="entry__footer">

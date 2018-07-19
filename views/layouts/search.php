@@ -6,7 +6,7 @@ Hybrid\View\render( 'components', 'archive-header' ) ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php Hybrid\View\render( 'entry-archive', Hybrid\Post\hierarchy() ) ?>
+		<?php Hybrid\View\render( 'entries', Hybrid\Template\hierarchy() ) ?>
 
 	<?php endwhile ?>
 

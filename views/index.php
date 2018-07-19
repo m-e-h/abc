@@ -11,7 +11,7 @@ Hybrid\View\render( 'header' );
 
 	</main>
 
-	<?php Hybrid\View\render( 'components/sidebar', 'primary', [ 'name' => 'primary' ] ); ?>
+	<?php Hybrid\View\render( 'components', 'sidebar', [ 'name' => 'primary' ] ); ?>
 
 </div>
 
