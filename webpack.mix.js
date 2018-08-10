@@ -16,6 +16,7 @@
 
 // Import required packages.
 const { mix }           = require( 'laravel-mix' );
+const rimraf            = require( 'rimraf' );
 const ImageminPlugin    = require( 'imagemin-webpack-plugin' ).default;
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
 const imageminMozjpeg   = require( 'imagemin-mozjpeg' );
@@ -29,6 +30,9 @@ if ( process.env.bundle ) {
 
 	// Folder name to bundle the files in.
 	let bundlePath = 'mythic';
+
+	// Remove any previously created bundles.
+	rimraf.sync(bundlePath);
 
 	// Theme root-level files to include.
 	let files = [
